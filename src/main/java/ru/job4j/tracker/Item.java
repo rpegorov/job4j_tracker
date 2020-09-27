@@ -20,9 +20,11 @@ public class Item {
     }
 
     public Item(int id) {
+        this.id = id;
     }
 
     public Item(String name) {
+        this.name = name;
     }
 
     public void setName(String name) {
