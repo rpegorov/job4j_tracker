@@ -52,6 +52,6 @@ public class Tracker {
             item.setId(id);
             items[findId] = item;
         }
-        return findId == -1;
+        return findId != -1;
     }
 }
