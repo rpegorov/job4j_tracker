@@ -22,9 +22,11 @@ public class Tracker {
         int size = 0;
         for (int i = 0; i < this.size; i++) {
             Item item = items[i];
-            if (item.equals(key)) {
+            if (item.getName().equals(key)) {
                 itemsFindName[size] = item;
                 size++;
+            } else {
+                System.out.println("Invalid name");
             }
         }
         return Arrays.copyOf(itemsFindName, size);
@@ -51,8 +53,6 @@ public class Tracker {
         if (findId != -1) {
             item.setId(id);
             items[findId] = item;
-        } else {
-            System.out.println("Invalid item ID");
         }
         return findId != -1;
     }
@@ -67,8 +67,6 @@ public class Tracker {
             System.arraycopy(items, startPos, items, distPos, length);
             items[size - 1] = null;
             size--;
-        } else {
-            System.out.println("Invalid item ID");
         }
         return rsl;
     }
