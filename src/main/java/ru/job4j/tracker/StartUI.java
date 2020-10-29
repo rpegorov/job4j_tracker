@@ -24,7 +24,7 @@ public class StartUI {
         msg = "Enter ID editable element: ";
         int id = Integer.valueOf(input.askStr(msg));
         Item itemId = new Item(id);
-        msg = "Entre new Item: ";
+        msg = "Entre a new Item name: ";
         String newMeaning = input.askStr(msg);
         Item itemMeaning = new Item(newMeaning);
         if (tracker.replace(id, itemMeaning)) {
