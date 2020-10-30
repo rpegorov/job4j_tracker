@@ -1,6 +1,5 @@
 package ru.job4j.tracker;
 
-
 public class StartUI {
     private static String msg;
 
@@ -11,6 +10,7 @@ public class StartUI {
         Item item = new Item(name);
         tracker.add(item);
     }
+
     public static void showAllItem(Input input, Tracker tracker) {
         System.out.println("===Show all item===");
         Item[] all = tracker.findAll();
@@ -19,6 +19,7 @@ public class StartUI {
                     + " Name: " + all[i].getName());
         }
     }
+
     public static void editItem(Input input, Tracker tracker) {
         System.out.println("===Edit item====");
         msg = "Enter ID editable element: ";
@@ -33,6 +34,7 @@ public class StartUI {
             System.out.println("Edit failed");
         }
     }
+
     public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("===Delete item====");
         msg = "Enter ID to delete: ";
@@ -43,6 +45,7 @@ public class StartUI {
             System.out.println("Invalid item ID");
         }
     }
+
     public static void findById(Input input, Tracker tracker) {
         System.out.println("===Find item by ID===");
         msg = "Enter ID to find: ";
@@ -55,6 +58,7 @@ public class StartUI {
             System.out.println("Find item is: " + item.getName());
         }
     }
+
     public static void findByName(Input input, Tracker tracker) {
         System.out.println("===Find items by name===");
         msg = "Enter name to find: ";
