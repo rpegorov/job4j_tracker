@@ -54,4 +54,26 @@ public class StartUITest {
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
     }
+
+    @Test
+    public void showAll() {
+        StubOutput out = new StubOutput();
+        Tracker tracker = new Tracker();
+        Item item = tracker.add(new Item("Item test"));
+        Input in = new StubInput(
+                new String[] {"0", "1"}
+        );
+        UserAction[] actions = {
+                new ShowAllAction(out),
+                new Exit(out)
+        };
+        new StartUI(out).init(in, tracker, actions);
+        assertThat(out.toString(), is("Menu."
+                + "\r\n=== Show all item ==="
+                + "\r\nItem ID: 1 |  Name: Item test"
+                + "\r\nMenu."
+                + "\r\n=== Exit program ==="
+                + "\r\nExit program, good bay!"
+                + "\r\n"));
+    }
 }
