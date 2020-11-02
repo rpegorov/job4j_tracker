@@ -16,9 +16,11 @@ public class Item {
         return name;
     }
 
+    @SuppressWarnings("checkstyle:DeclarationOrder")
     public Item() {
     }
 
+    @SuppressWarnings("checkstyle:DeclarationOrder")
     public Item(int id) {
         this.id = id;
     }
