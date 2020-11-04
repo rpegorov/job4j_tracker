@@ -57,7 +57,7 @@ public class StartUITest {
 
     @Test
     public void showAll() {
-        StubOutput out = new StubOutput();
+        Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Item test"));
         Input in = new StubInput(
@@ -127,5 +127,22 @@ public class StartUITest {
                 + System.lineSeparator() + "=== Exit program ==="
                 + System.lineSeparator() + "Exit program, good bay!" + System.lineSeparator())
         );
+    }
+
+    @Test
+    public void whenExit() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"0"}
+        );
+        Tracker tracker = new Tracker();
+        UserAction[] actions = {
+                new Exit(out)
+        };
+        new StartUI(out).init(in, tracker, actions);
+        assertThat(out.toString(), is("Menu."
+                + "\r\n=== Exit program ==="
+                + "\r\nExit program, good bay!"
+                + "\r\n"));
     }
 }
