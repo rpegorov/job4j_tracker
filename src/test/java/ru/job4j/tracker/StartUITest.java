@@ -145,4 +145,25 @@ public class StartUITest {
                 + "\r\nExit program, good bay!"
                 + "\r\n"));
     }
+
+    @Test
+    public void whenInvalid() {
+        Output out = new StubOutput();
+        ValidateInput valid = new ValidateInput();
+        Input input = new StubInput(
+                new String[] {"7", "0"}
+        );
+        Tracker tracker = new Tracker();
+        UserAction[] actions = {
+                new Exit(out)
+        };
+        new StartUI(out).init(input, tracker, actions);
+        assertThat(out.toString(), is(
+                String.format("Menu."
+                        + System.lineSeparator() + "Wrong input, you can select: 0 - 0"
+                        + System.lineSeparator() + "Menu."
+                        + System.lineSeparator() + "=== Exit program ==="
+                        + System.lineSeparator() + "Exit program, good bay!" + System.lineSeparator()))
+        );
+    }
 }
