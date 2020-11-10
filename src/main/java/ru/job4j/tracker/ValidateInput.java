@@ -5,6 +5,7 @@ public class ValidateInput implements Input {
     private final Input in;
 
     public ValidateInput(Output out, Input input) {
+        /* не работает! */
         this.out = out;
         this.in = input;
     }
