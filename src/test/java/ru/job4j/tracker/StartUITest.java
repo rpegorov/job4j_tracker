@@ -149,7 +149,6 @@ public class StartUITest {
     @Test
     public void whenInvalid() {
         Output out = new StubOutput();
-        ValidateInput valid = new ValidateInput();
         Input input = new StubInput(
                 new String[] {"7", "0"}
         );
@@ -158,12 +157,34 @@ public class StartUITest {
                 new Exit(out)
         };
         new StartUI(out).init(input, tracker, actions);
-        assertThat(out.toString(), is(
-                String.format("Menu."
+        assertThat(out.toString(), is("Menu."
                         + System.lineSeparator() + "Wrong input, you can select: 0 - 0"
                         + System.lineSeparator() + "Menu."
                         + System.lineSeparator() + "=== Exit program ==="
-                        + System.lineSeparator() + "Exit program, good bay!" + System.lineSeparator()))
+                        + System.lineSeparator() + "Exit program, good bay!"
+                        + System.lineSeparator())
         );
+    }
+
+    @Test
+    public void whenInvalidInput() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"one", "1"}
+        );
+        ValidateInput input = new ValidateInput(out, in);
+        int selected = input.askInt("Enter menu:");
+        assertThat(selected, is(1));
+    }
+
+    @Test
+    public void whenInvalidInput2() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"1", "1"}
+        );
+        ValidateInput input = new ValidateInput(out, in);
+        int selected = input.askInt("Enter menu:");
+        assertThat(selected, is(1));
     }
 }

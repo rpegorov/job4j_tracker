@@ -5,7 +5,6 @@ public class ValidateInput implements Input {
     private final Input in;
 
     public ValidateInput(Output out, Input input) {
-        /* не работает! */
         this.out = out;
         this.in = input;
     }
@@ -21,7 +20,7 @@ public class ValidateInput implements Input {
         int value = -1;
         do {
             try {
-                value = super.askInt(question);
+                value = in.askInt(question);
                 invalid = false;
             } catch (NumberFormatException nfe) {
                 System.out.println("Uncorrected data. "
