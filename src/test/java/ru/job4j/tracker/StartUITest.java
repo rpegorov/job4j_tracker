@@ -158,11 +158,11 @@ public class StartUITest {
         };
         new StartUI(out).init(input, tracker, actions);
         assertThat(out.toString(), is("Menu."
-                        + System.lineSeparator() + "Wrong input, you can select: 0 - 0"
-                        + System.lineSeparator() + "Menu."
-                        + System.lineSeparator() + "=== Exit program ==="
-                        + System.lineSeparator() + "Exit program, good bay!"
-                        + System.lineSeparator())
+                + System.lineSeparator() + "Wrong input, you can select: 0 - 0"
+                + System.lineSeparator() + "Menu."
+                + System.lineSeparator() + "=== Exit program ==="
+                + System.lineSeparator() + "Exit program, good bay!"
+                + System.lineSeparator())
         );
     }
 
@@ -174,7 +174,9 @@ public class StartUITest {
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
-        assertThat(selected, is(1));
+        assertThat(out.toString(), is("Uncorrected data. "
+                + "Please enter validate data again."
+                + System.lineSeparator()));
     }
 
     @Test
