@@ -13,11 +13,10 @@ public class PhoneDictionary {
     }
 
     public ArrayList<Person> find(String key) {
-        Predicate<String> check = s -> s.contains(key);
-        Predicate<Person> personPredicate = person -> check.test(person.getName())
-                    || check.test(person.getSurname())
-                    || check.test(person.getPhone())
-                    || check.test(person.getAddress());
+        Predicate<Person> personPredicate = person -> (person.getName().contains(key))
+                    || person.getSurname().contains(key)
+                    || person.getPhone().contains(key)
+                    || person.getAddress().contains(key);
 
         ArrayList<Person> result = new ArrayList<>();
         for (Person person : persons) {
