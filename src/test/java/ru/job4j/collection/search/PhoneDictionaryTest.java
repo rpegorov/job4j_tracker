@@ -3,7 +3,6 @@ package ru.job4j.collection.search;
 import org.junit.Test;
 import ru.job4j.collection.Person;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.core.Is.is;
