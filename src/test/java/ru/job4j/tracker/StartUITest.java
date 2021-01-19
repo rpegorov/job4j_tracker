@@ -19,7 +19,7 @@ public class StartUITest {
                 new Exit(out)
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findAll()[0].getName(), is("Item name"));
+        assertThat(tracker.findAll().get(0).getName(), is("Item name"));
     }
 
     @Test
@@ -91,13 +91,9 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is("Menu."
-                + System.lineSeparator() + "0. Find by name"
-                + System.lineSeparator() + "1. Exit"
                 + System.lineSeparator() + "=== Find items by name ==="
                 + System.lineSeparator() + "Find ID is: 1"
                 + System.lineSeparator() + "Menu."
-                + System.lineSeparator() + "0. Find by name"
-                + System.lineSeparator() + "1. Exit"
                 + System.lineSeparator() + "=== Exit program ==="
                 + System.lineSeparator() + "Exit program, good bay!" + System.lineSeparator())
         );
@@ -117,13 +113,9 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is("Menu."
-                + System.lineSeparator() + "0. Find by ID"
-                + System.lineSeparator() + "1. Exit"
                 + System.lineSeparator() + "=== Find item by ID ==="
                 + System.lineSeparator() + "Find item is: Item"
                 + System.lineSeparator() + "Menu."
-                + System.lineSeparator() + "0. Find by ID"
-                + System.lineSeparator() + "1. Exit"
                 + System.lineSeparator() + "=== Exit program ==="
                 + System.lineSeparator() + "Exit program, good bay!" + System.lineSeparator())
         );
@@ -141,9 +133,9 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is("Menu."
-                + "\r\n=== Exit program ==="
-                + "\r\nExit program, good bay!"
-                + "\r\n"));
+                + "\n=== Exit program ==="
+                + "\nExit program, good bay!"
+                + "\n"));
     }
 
     @Test
