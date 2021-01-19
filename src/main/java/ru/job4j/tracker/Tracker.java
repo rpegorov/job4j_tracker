@@ -4,28 +4,22 @@ import java.util.*;
 
 public class Tracker {
     private final List<Item> items = new ArrayList<>();
-    //    private final Item[] items = new Item[100];
     private int ids = 1;
-    private int size = 0;
 
     public Item add(Item item) {
         item.setId(ids++);
-        items.add(size++, item);
+        items.add(item);
         return item;
     }
 
     public List<Item> findAll() {
         return new ArrayList<>(items);
     }
-//    public Item[] findAll() {
-//        return Arrays.copyOf(new List[][]{new List[]{items}}, size);
-//    }
 
     public List<Item> finByName(String key) {
-        Item[] itemsFindName = new Item[this.size];
+        Item[] itemsFindName = new Item[items.size()];
         int size = 0;
-        for (int i = 0; i < this.size; i++) {
-            Item item = items.get(i);
+        for (Item item : items) {
             if (item.getName().equals(key)) {
                 itemsFindName[size] = item;
                 size++;
@@ -43,7 +37,7 @@ public class Tracker {
 
     private int indexOf(int id) {
         int rsl = -1;
-        for (int index = 0; index < size; index++) {
+        for (int index = 0; index < items.size(); index++) {
             if (items.get(index).getId() == id) {
                 rsl = index;
                 break;
@@ -77,7 +71,7 @@ public class Tracker {
 //              if (nextItem.getId() == id) {
 //                  itemIterator.remove();
 //              }
-            items.remove(id);
+            items.remove(index);
         }
         return rsl;
     }
