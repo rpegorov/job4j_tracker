@@ -4,23 +4,9 @@ public class Item {
     private int id;
     private String name;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    @SuppressWarnings("checkstyle:DeclarationOrder")
     public Item() {
     }
 
-    @SuppressWarnings("checkstyle:DeclarationOrder")
     public Item(int id) {
         this.id = id;
     }
@@ -29,7 +15,19 @@ public class Item {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

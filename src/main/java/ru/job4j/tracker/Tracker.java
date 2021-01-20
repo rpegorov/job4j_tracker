@@ -27,7 +27,7 @@ public class Tracker {
                 System.out.println("Invalid name");
             }
         }
-        return new ArrayList<>(items);
+        return Arrays.asList(itemsFindName);
     }
 
     public Item findById(int id) {
@@ -59,18 +59,6 @@ public class Tracker {
         int index = indexOf(id);
         boolean rsl = index != -1;
         if (rsl) {
-//            int startPos = index++;
-//            int distPos = index;
-//            int length = size - index;
-//            System.arraycopy(items, startPos, items, distPos, length);
-//            items.set(size - 1, null);
-//            size--;
-//            Iterator<Item> itemIterator = items.iterator();
-//            while (itemIterator.hasNext()) {
-//              Item nextItem = itemIterator.next();
-//              if (nextItem.getId() == id) {
-//                  itemIterator.remove();
-//              }
             items.remove(index);
         }
         return rsl;
