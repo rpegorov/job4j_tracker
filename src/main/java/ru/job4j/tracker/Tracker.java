@@ -17,17 +17,13 @@ public class Tracker {
     }
 
     public List<Item> finByName(String key) {
-        Item[] itemsFindName = new Item[items.size()];
-        int size = 0;
+        List<Item> itemsFindName = new ArrayList<>();
         for (Item item : items) {
             if (item.getName().equals(key)) {
-                itemsFindName[size] = item;
-                size++;
-            } else {
-                System.out.println("Invalid name");
+                itemsFindName.add(item);
             }
         }
-        return Arrays.asList(itemsFindName);
+        return itemsFindName;
     }
 
     public Item findById(int id) {
