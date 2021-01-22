@@ -10,7 +10,7 @@ public class UniqueTextTest {
     @Test
     public void isEqualsTrue() {
         String origin = "True test";
-        String duplicate = "Test True";
+        String duplicate = "test True";
         assertThat(UniqueText.isEquals(origin, duplicate), is(true));
     }
 
