@@ -42,6 +42,7 @@ public class BankService {
             for (Account a : accounts) {
                 if (a.getRequisite().contains(requisite)) {
                     search = a;
+                    break;
                 }
             }
         }
