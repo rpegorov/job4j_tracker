@@ -16,8 +16,18 @@ public class JobTestSort {
     public void sortByNameAndPriorityAsc() {
         Comparator<Job> test = new JobSortByNameAsc().thenComparing(new JobSortByPriorityAsc());
         int rsl = test.compare(
-                new Job("AAA", 0),
+                new Job("ZZZ", 0),
                 new Job("AAA", 1)
+        );
+        assertThat(rsl, lessThan(0));
+    }
+
+    @Test
+    public void whenCompatorByNameAndPrority() {
+        Comparator<Job> cmpNamePriority = new JobSortByNameDesc().thenComparing(new JobSortByPriorityDesc());
+        int rsl = cmpNamePriority.compare(
+                new Job("Impl task", 0),
+                new Job("Fix bug", 1)
         );
         assertThat(rsl, lessThan(0));
     }
