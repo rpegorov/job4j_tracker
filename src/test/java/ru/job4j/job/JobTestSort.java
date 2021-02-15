@@ -1,4 +1,4 @@
-package ru.job4j.collection.job;
+package ru.job4j.job;
 
 import org.junit.Test;
 
@@ -24,7 +24,8 @@ public class JobTestSort {
 
     @Test
     public void whenCompatorByNameAndPrority() {
-        Comparator<Job> cmpNamePriority = new JobSortByNameDesc().thenComparing(new JobSortByPriorityDesc());
+        Comparator<Job> cmpNamePriority =
+                new JobSortByNameDesc().thenComparing(new JobSortByPriorityDesc());
         int rsl = cmpNamePriority.compare(
                 new Job("Impl task", 0),
                 new Job("Fix bug", 1)

@@ -1,4 +1,4 @@
-package ru.job4j.collection.search;
+package ru.job4j.search;
 
 import ru.job4j.collection.Person;
 
@@ -18,9 +18,9 @@ public class PhoneDictionary {
             if (person.getName().contains(key)
                     || person.getSurname().contains(key)
                     || person.getPhone().contains(key)
-                    || person.getAddress().contains(key))
-
+                    || person.getAddress().contains(key)) {
                 result.add(person);
+            }
         }
         return result;
     }
