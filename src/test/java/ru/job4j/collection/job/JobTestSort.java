@@ -17,7 +17,7 @@ public class JobTestSort {
         Comparator<Job> test = new JobSortByNameAsc().thenComparing(new JobSortByPriorityAsc());
         int rsl = test.compare(
                 new Job("AAA", 0),
-                new Job("ZZZ", 1)
+                new Job("AAA", 1)
         );
         assertThat(rsl, lessThan(0));
     }
