@@ -1,18 +1,15 @@
 package ru.job4j.collection;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
+
 public class Article {
     public static boolean generateBy(String origin, String line) {
-        String[] valueOrg = origin.split(" ");
-        String[] valueLin = line.split(" ");
-        for (String value : valueLin) {
-            boolean tmp = false;
-            for (String s : valueOrg) {
-                if (s.contains(value)) {
-                    tmp = true;
-                    break;
-                }
-            }
-            if (!tmp) {
+        HashSet<String> rsl = new HashSet<>(Arrays.asList(origin.split(" ")));
+        String[] valueLine = line.split(" ");
+        for (String s : valueLine) {
+            if (!rsl.contains(s)) {
                 return false;
             }
         }
