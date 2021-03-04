@@ -13,7 +13,7 @@ public class SearchAtt {
                 return attachment.getSize() > 100;
             }
         };
-        rsl = filter(rsl, tester);
+        rsl = filter(list, tester);
         return rsl;
     }
 
@@ -25,7 +25,7 @@ public class SearchAtt {
                     return attachment.getName().contains("bug");
                 }
             };
-            rsl = filter(rsl, tester);
+            rsl = filter(list, tester);
             return rsl;
         }
 
