@@ -19,7 +19,7 @@ public class LambdaUsage {
 
         Comparator<Attachment> cmpDescSize = (left, right) -> {
             System.out.println("compare: " + left.getSize() + " : " + right.getSize());
-            return  right.getSize() - left.getSize();
+            return  Integer.compare(left.getSize(), right.getSize());
         };
         attachments.sort(cmpText);
         System.out.println(attachments);
