@@ -19,7 +19,12 @@ public class AttachmentSort {
         };
         attachments.sort(comparator);
         System.out.println(attachments);
-        Comparator<Attachment> comparatorName = Comparator.comparing(Attachment::getName);
-    }
 
+        Comparator<Attachment> comparatorName = new Comparator<Attachment>() {
+            @Override
+            public int compare(Attachment o1, Attachment o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        };
+    }
 }
