@@ -10,8 +10,7 @@ public class Filter {
                 .distinct()
                 .collect(Collectors.toMap(
                         Student::getSurname,
-                        x -> x,
-                        (x, y) -> x)
+                        student -> student)
                 );
     }
 }
