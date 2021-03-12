@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 public class Filter {
     Map<String, Student> filters(List<Student> students) {
         return students.stream()
-                .distinct()
                 .collect(Collectors.toMap(
                         Student::getSurname,
                         student -> student)
