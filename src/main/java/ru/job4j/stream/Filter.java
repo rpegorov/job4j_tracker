@@ -9,7 +9,8 @@ public class Filter {
         return students.stream()
                 .collect(Collectors.toMap(
                         Student::getSurname,
-                        student -> student)
+                        student -> student,
+                        (existing, replacement) -> existing)
                 );
     }
 }
