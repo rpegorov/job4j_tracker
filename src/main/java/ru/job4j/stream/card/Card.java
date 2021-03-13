@@ -17,8 +17,6 @@ public class Card {
     }
 
     public static void main(String[] args) {
-        Suit[] levels = Suit.values();
-        Value[] tasks = Value.values();
         Stream.of(Suit.values())
                 .flatMap(level -> Stream.of(Value.values())
                         .map(task -> new Card(level, task)))
