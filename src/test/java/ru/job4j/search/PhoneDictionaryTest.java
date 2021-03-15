@@ -13,7 +13,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void findBySurname() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(new Person("Rostislav", "Egorov",
                 "8912111222333", "Kiev"));
         ArrayList<Person> persons = phones.find("Rostislav");
@@ -22,7 +22,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void findByName() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(new Person("Rostislav", "Egorov",
                 "8912111222333", "Kiev"));
         ArrayList<Person> persons = phones.find("Rostislav");
@@ -31,7 +31,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void findByPhone() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(new Person("Rostislav", "Egorov",
                 "8912111222333", "Kiev"));
         ArrayList<Person> persons = phones.find("Rostislav");
@@ -40,7 +40,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void findByPhoneKeySurname() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(new Person("Rostislav", "Egorov",
                 "8912111222333", "Kiev"));
         ArrayList<Person> persons = phones.find("Egorov");

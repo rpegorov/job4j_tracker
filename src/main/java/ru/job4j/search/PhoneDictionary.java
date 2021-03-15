@@ -4,6 +4,7 @@ import ru.job4j.collection.Person;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class PhoneDictionary {
     private ArrayList<Person> persons = new ArrayList<>();
@@ -18,12 +19,9 @@ public class PhoneDictionary {
         Predicate<Person> searchPhone = (x) -> x.getPhone().contains(key);
         Predicate<Person> searchAddress = (x) -> x.getAddress().contains(key);
         Predicate<Person> combine = searchName.or(searchSurname.or(searchPhone).or(searchAddress));
-        ArrayList<Person> result = new ArrayList<>();
-        for (Person person : persons) {
-            if (combine.test(person)) {
-                result.add(person);
-            }
-        }
+        ArrayList<Person> result = persons.stream()
+                .filter(combine::test)
+                .collect(Collectors.toCollection(ArrayList::new));
         return result;
     }
 }
