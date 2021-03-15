@@ -20,7 +20,7 @@ public class PhoneDictionary {
         Predicate<Person> searchAddress = (x) -> x.getAddress().contains(key);
         Predicate<Person> combine = searchName.or(searchSurname.or(searchPhone).or(searchAddress));
         ArrayList<Person> result = persons.stream()
-                .filter(combine::test)
+                .filter(combine)
                 .collect(Collectors.toCollection(ArrayList::new));
         return result;
     }
