@@ -15,12 +15,12 @@ public class NotifyAccountTest {
 
     @Test
     public void sent() {
-        List<Account> accounts = Arrays.asList(
+        List<Account> accounts = List.of(
                 new Account("8888", "Rostislav", "22222"),
                 new Account("5555", "Egorov", "3333333")
         );
         HashSet<Account> expect = new HashSet<>(
-                Arrays.asList(
+                List.of(
                         new Account("8888", "Rostislav", "22222"),
                         new Account("5555", "Egorov", "3333333")
                 )
@@ -30,7 +30,7 @@ public class NotifyAccountTest {
 
     @Test
     public void sentDuplicate() {
-        List<Account> accounts = Arrays.asList(
+        List<Account> accounts = List.of(
                 new Account("111", "ros", "1111111"),
                 new Account("111", "egorov", "00000")
         );
