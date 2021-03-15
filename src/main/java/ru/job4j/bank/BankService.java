@@ -32,7 +32,7 @@ public class BankService {
         return user.flatMap(value -> users.get(value)
                 .stream()
                 .filter(users -> users.getRequisite().equals(requisite))
-                .findFirst()).or(() -> rsl);
+                .findFirst());
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisite,
