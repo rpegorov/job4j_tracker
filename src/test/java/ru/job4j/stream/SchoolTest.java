@@ -72,7 +72,7 @@ public class SchoolTest {
     }
 
     @Test
-    public void listToMapDupKey() {
+    public void listToMapWhenDupKey() {
         Filter filter = new Filter();
         Map<String, Student> student = filter.filters(students);
         assertEquals(10, students.size());
