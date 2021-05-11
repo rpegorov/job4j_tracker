@@ -38,6 +38,7 @@ public class SchoolTest {
         expected.add(new Student(70, "Surname7", "name7"));
         expected.add(new Student(80, "Surname8", "name8"));
         expected.add(new Student(90, "Surname9", "name9"));
+        expected.add(new Student(90, "Surname9", "name9"));
         assertThat(rsl, is(expected));
     }
 
