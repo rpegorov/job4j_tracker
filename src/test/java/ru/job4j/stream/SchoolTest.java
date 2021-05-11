@@ -68,11 +68,11 @@ public class SchoolTest {
     @Test
     public void listToMap() {
         Filter filter = new Filter();
-       assertTrue(filter.filters(students).size() == 9);
+        assertEquals(9, filter.filters(students).size());
     }
 
     @Test
-    public void ListToMapWithDupKey() {
+    public void listToMapDupKey() {
         Filter filter = new Filter();
         Map<String, Student> student = filter.filters(students);
         assertEquals(10, students.size());
