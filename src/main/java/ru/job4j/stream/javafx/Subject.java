@@ -1,4 +1,4 @@
-package ru.job4j.stream.javaFX;
+package ru.job4j.stream.javafx;
 
 public class Subject {
     private String name;
