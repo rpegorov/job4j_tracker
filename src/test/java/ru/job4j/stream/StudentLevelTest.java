@@ -8,8 +8,18 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>StudentLevelTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class StudentLevelTest {
 
+    /**
+     * <p>levelOf.</p>
+     */
     @Test
     public void levelOf() {
         List<Student> input = new ArrayList<>();
@@ -22,6 +32,9 @@ public class StudentLevelTest {
         assertThat(StudentLevel.levelOf(input, 20), is(exp));
     }
 
+    /**
+     * <p>whenNull.</p>
+     */
     @Test
     public void whenNull() {
         List<Student> input = new ArrayList<>();
@@ -30,6 +43,9 @@ public class StudentLevelTest {
         assertThat(StudentLevel.levelOf(input, 20), is(exp));
     }
 
+    /**
+     * <p>whenNullAndNotNull.</p>
+     */
     @Test
     public void whenNullAndNotNull() {
         List<Student> input = new ArrayList<>();

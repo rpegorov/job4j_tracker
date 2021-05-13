@@ -11,8 +11,18 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>NotifyAccountTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class NotifyAccountTest {
 
+    /**
+     * <p>sent.</p>
+     */
     @Test
     public void sent() {
         List<Account> accounts = List.of(
@@ -28,6 +38,9 @@ public class NotifyAccountTest {
         assertThat(NotifyAccount.sent(accounts), is(expect));
     }
 
+    /**
+     * <p>sentDuplicate.</p>
+     */
     @Test
     public void sentDuplicate() {
         List<Account> accounts = List.of(

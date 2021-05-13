@@ -5,8 +5,18 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>PriorityQueueTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class PriorityQueueTest {
 
+    /**
+     * <p>whenHigherPriority.</p>
+     */
     @Test
     public void whenHigherPriority() {
         var queue = new PriorityQueue();

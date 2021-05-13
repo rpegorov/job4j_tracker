@@ -5,8 +5,18 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
+/**
+ * <p>StartUITest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class StartUITest {
 
+    /**
+     * <p>whenCreateNewItem.</p>
+     */
     @Test
     public void whenCreateNewItem() {
         Output out = new StubOutput();
@@ -22,6 +32,9 @@ public class StartUITest {
         assertThat(tracker.findAll().get(0).getName(), is("Item name"));
     }
 
+    /**
+     * <p>whenReplaceItem.</p>
+     */
     @Test
     public void whenReplaceItem() {
         Output out = new StubOutput();
@@ -39,6 +52,9 @@ public class StartUITest {
         assertThat(tracker.findById(item.getId()).getName(), is(replacedName));
     }
 
+    /**
+     * <p>deleteItem.</p>
+     */
     @Test
     public void deleteItem() {
         Output out = new StubOutput();
@@ -55,6 +71,9 @@ public class StartUITest {
         assertThat(tracker.findById(item.getId()), is(nullValue()));
     }
 
+    /**
+     * <p>showAll.</p>
+     */
     @Test
     public void showAll() {
         Output out = new StubOutput();
@@ -77,6 +96,9 @@ public class StartUITest {
         );
     }
 
+    /**
+     * <p>findByNameAction.</p>
+     */
     @Test
     public void findByNameAction() {
         StubOutput out = new StubOutput();
@@ -99,6 +121,9 @@ public class StartUITest {
         );
     }
 
+    /**
+     * <p>findByIDAction.</p>
+     */
     @Test
     public void findByIDAction() {
         StubOutput out = new StubOutput();
@@ -121,6 +146,9 @@ public class StartUITest {
         );
     }
 
+    /**
+     * <p>whenExit.</p>
+     */
     @Test
     public void whenExit() {
         Output out = new StubOutput();
@@ -138,6 +166,9 @@ public class StartUITest {
                 + "\n"));
     }
 
+    /**
+     * <p>whenInvalid.</p>
+     */
     @Test
     public void whenInvalid() {
         Output out = new StubOutput();
@@ -158,6 +189,9 @@ public class StartUITest {
         );
     }
 
+    /**
+     * <p>whenInvalidInput.</p>
+     */
     @Test
     public void whenInvalidInput() {
         Output out = new StubOutput();
@@ -171,6 +205,9 @@ public class StartUITest {
                 + System.lineSeparator()));
     }
 
+    /**
+     * <p>whenInvalidInput2.</p>
+     */
     @Test
     public void whenInvalidInput2() {
         Output out = new StubOutput();

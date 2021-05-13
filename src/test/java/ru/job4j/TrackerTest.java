@@ -8,7 +8,17 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.IsNull.nullValue;
 
+/**
+ * <p>TrackerTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class TrackerTest {
+    /**
+     * <p>whenAddNewItemThenTrackerHasSameItem.</p>
+     */
     @Test
     public void whenAddNewItemThenTrackerHasSameItem() {
         Tracker tracker = new Tracker();
@@ -19,6 +29,9 @@ public class TrackerTest {
         assertThat(result.getName(), is(item.getName()));
     }
 
+    /**
+     * <p>replace.</p>
+     */
     @Test
     public void replace() {
         Tracker tracker = new Tracker();
@@ -32,6 +45,9 @@ public class TrackerTest {
         assertThat(tracker.findById(id).getName(), is("Bug with description"));
     }
 
+    /**
+     * <p>whenDelete.</p>
+     */
     @Test
     public void whenDelete() {
         Tracker tracker = new Tracker();

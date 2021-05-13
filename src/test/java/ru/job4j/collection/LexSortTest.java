@@ -7,8 +7,18 @@ import java.util.Arrays;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>LexSortTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class LexSortTest {
 
+    /**
+     * <p>sortNum1and2and10.</p>
+     */
     @Test
     public void sortNum1and2and10() {
         String[] input = {

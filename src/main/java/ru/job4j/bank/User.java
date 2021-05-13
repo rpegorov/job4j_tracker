@@ -2,7 +2,15 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Class describes the user of the bank service
+ * @author rpegorov
+ * @version 0.1
+ */
 public class User {
+    /**
+     * The user has fields passport and username
+     */
     private String passport;
     private String username;
 

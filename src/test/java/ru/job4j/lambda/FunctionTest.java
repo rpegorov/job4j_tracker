@@ -8,8 +8,18 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * <p>FunctionTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class FunctionTest {
 
+    /**
+     * <p>testDiapason.</p>
+     */
     @Test
     public void testDiapason() {
         Function function = new Function();
@@ -18,6 +28,9 @@ public class FunctionTest {
         assertThat(result, is(expected));
     }
 
+    /**
+     * <p>whenQuadraticFunction.</p>
+     */
     @Test
     public void whenQuadraticFunction() {
         Function function = new Function();
@@ -26,6 +39,9 @@ public class FunctionTest {
         assertThat(result, is(expected));
     }
 
+    /**
+     * <p>whenExponentialFunction.</p>
+     */
     @Test
     public void whenExponentialFunction() {
         Function function = new Function();

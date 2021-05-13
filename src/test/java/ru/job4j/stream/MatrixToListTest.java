@@ -7,8 +7,18 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>MatrixToListTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class MatrixToListTest {
 
+    /**
+     * <p>convertMatrixToList.</p>
+     */
     @Test
     public void convertMatrixToList() {
         Integer[][] matrix = {

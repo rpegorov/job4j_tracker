@@ -5,8 +5,18 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>ArticleTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class ArticleTest {
 
+    /**
+     * <p>whenLineGnrTrue.</p>
+     */
     @Test
     public void whenLineGnrTrue() {
         assertThat(
@@ -18,6 +28,9 @@ public class ArticleTest {
         );
     }
 
+    /**
+     * <p>whenLineGnrFalse.</p>
+     */
     @Test
     public void whenLineGnrFalse() {
         assertThat(
@@ -29,6 +42,9 @@ public class ArticleTest {
         );
     }
 
+    /**
+     * <p>whenLongTextTrue.</p>
+     */
     @Test
     public void whenLongTextTrue() {
         assertThat(
@@ -53,6 +69,9 @@ public class ArticleTest {
         );
     }
 
+    /**
+     * <p>whenLongTextFalse.</p>
+     */
     @Test
     public void whenLongTextFalse() {
         assertThat(

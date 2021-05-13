@@ -10,8 +10,18 @@ import java.util.List;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * <p>SortItemTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class SortItemTest {
 
+    /**
+     * <p>sortByName.</p>
+     */
     @Test
     public void sortByName() {
         Tracker tracker = new Tracker();
@@ -32,6 +42,9 @@ public class SortItemTest {
         assertThat(result.get(0).getName(), is("AAA"));
     }
 
+    /**
+     * <p>sortByNameRevers.</p>
+     */
     @Test
     public void sortByNameRevers() {
         Tracker tracker = new Tracker();

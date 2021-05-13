@@ -10,8 +10,18 @@ import java.util.Set;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>FullSearchTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class FullSearchTest {
 
+    /**
+     * <p>extractNumber.</p>
+     */
     @Test
     public void extractNumber() {
         List<Task> list = List.of(

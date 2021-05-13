@@ -7,8 +7,18 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * <p>ProfileTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class ProfileTest {
 
+    /**
+     * <p>getAddress.</p>
+     */
     @Test
     public void getAddress() {
         Address moscow = new Address("Moscow", "Lenina", 10, 54);
@@ -28,6 +38,9 @@ public class ProfileTest {
         assertThat(rsl, is(exp));
     }
 
+    /**
+     * <p>whenDuplicate.</p>
+     */
     @Test
     public void whenDuplicate() {
         Address moscow = new Address("Moscow", "Lenina", 10, 54);

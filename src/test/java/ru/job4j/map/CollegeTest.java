@@ -9,7 +9,17 @@ import java.util.Set;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>CollegeTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class CollegeTest {
+    /**
+     * <p>whenAccountIsOptionalEmpty.</p>
+     */
     @Test
     public void whenAccountIsOptionalEmpty() {
         Map<Student, Set<Subject>> students = Map.of(
@@ -28,6 +38,9 @@ public class CollegeTest {
         assertThat(college.findByAccount("000010"), is(Optional.empty()));
     }
 
+    /**
+     * <p>whenAccountIsOptionalNotEmpty.</p>
+     */
     @Test
     public void whenAccountIsOptionalNotEmpty() {
         Map<Student, Set<Subject>> students = Map.of(
@@ -46,6 +59,9 @@ public class CollegeTest {
         assertThat(college.findByAccount("000001").get().getGroup(), is("201-18-15"));
     }
 
+    /**
+     * <p>whenSubjectIsOptionalEmptyWithNotFoundAccount.</p>
+     */
     @Test
     public void whenSubjectIsOptionalEmptyWithNotFoundAccount() {
         Map<Student, Set<Subject>> students = Map.of(
@@ -64,6 +80,9 @@ public class CollegeTest {
         assertThat(college.findBySubjectName("000010", "Sociology"), is(Optional.empty()));
     }
 
+    /**
+     * <p>whenSubjectIsOptionalEmptyWithFoundAccount.</p>
+     */
     @Test
     public void whenSubjectIsOptionalEmptyWithFoundAccount() {
         Map<Student, Set<Subject>> students = Map.of(
@@ -82,6 +101,9 @@ public class CollegeTest {
         assertThat(college.findBySubjectName("000001", "Sociology"), is(Optional.empty()));
     }
 
+    /**
+     * <p>whenSubjectIsOptionalNotEmpty.</p>
+     */
     @Test
     public void whenSubjectIsOptionalNotEmpty() {
         Map<Student, Set<Subject>> students = Map.of(

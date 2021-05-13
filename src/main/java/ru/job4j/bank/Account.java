@@ -2,7 +2,15 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Class describes the user Account
+ * @author rpegorov
+ * @version 0.1
+ */
 public class Account {
+    /**
+     * The account has fields requisite and balance
+     */
     private String requisite;
     private double balance;
 

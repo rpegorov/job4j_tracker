@@ -8,8 +8,18 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>ConvertArray2ListTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class ConvertArray2ListTest {
 
+    /**
+     * <p>toList.</p>
+     */
     @Test
     public void toList() {
         ConvertArray2List list = new ConvertArray2List();

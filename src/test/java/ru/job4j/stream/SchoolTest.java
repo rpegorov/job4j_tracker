@@ -12,9 +12,19 @@ import java.util.function.Predicate;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>SchoolTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class SchoolTest {
     private List<Student> students = new ArrayList<>();
 
+    /**
+     * <p>setUp.</p>
+     */
     @Before
     public void setUp() {
         students.add(new Student(10, "Surname1", "name1"));
@@ -29,6 +39,9 @@ public class SchoolTest {
         students.add(new Student(90, "Surname9", "name9"));
     }
 
+    /**
+     * <p>whenCollectClassA.</p>
+     */
     @Test
     public void whenCollectClassA() {
         School sc = new School();
@@ -42,6 +55,9 @@ public class SchoolTest {
         assertThat(rsl, is(expected));
     }
 
+    /**
+     * <p>whenCollectClassB.</p>
+     */
     @Test
     public void whenCollectClassB() {
         School sc = new School();
@@ -53,6 +69,9 @@ public class SchoolTest {
         assertThat(rsl, is(expected));
     }
 
+    /**
+     * <p>whenCollectClassC.</p>
+     */
     @Test
     public void whenCollectClassC() {
         School sc = new School();
@@ -66,12 +85,18 @@ public class SchoolTest {
         assertThat(rsl, is(expected));
     }
 
+    /**
+     * <p>listToMap.</p>
+     */
     @Test
     public void listToMap() {
         Filter filter = new Filter();
         assertEquals(9, filter.filters(students).size());
     }
 
+    /**
+     * <p>listToMapWhenDupKey.</p>
+     */
     @Test
     public void listToMapWhenDupKey() {
         Filter filter = new Filter();

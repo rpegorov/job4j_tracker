@@ -7,8 +7,18 @@ import java.util.Optional;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>BankServiceTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class BankServiceTest {
 
+    /**
+     * <p>addUser.</p>
+     */
     @Test
     public void addUser() {
         User user = new User("1122", "Test test");
@@ -17,6 +27,9 @@ public class BankServiceTest {
         assertThat(bank.findByPassport("1122"), is(Optional.of(user)));
     }
 
+    /**
+     * <p>addAccount.</p>
+     */
     @Test
     public void addAccount() {
         User user = new User("1122", "Test tests");
@@ -26,6 +39,9 @@ public class BankServiceTest {
         assertThat(bank.findByRequisite("1122", "3344").get().getBalance(), is(150.0D));
     }
 
+    /**
+     * <p>transferMoney.</p>
+     */
     @Test
     public void transferMoney() {
         User user = new User("3434", "Test tests");
@@ -37,6 +53,9 @@ public class BankServiceTest {
         assertThat(bank.findByRequisite(user.getPassport(), "113").get().getBalance(), is(200D));
     }
 
+    /**
+     * <p>whenEnterInvalidPassport.</p>
+     */
     @Test
     public void whenEnterInvalidPassport() {
         User user = new User("3434", "Test tests");

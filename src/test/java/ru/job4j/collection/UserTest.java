@@ -10,8 +10,18 @@ import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * <p>UserTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class UserTest {
 
+    /**
+     * <p>whenAsc.</p>
+     */
     @Test
     public void whenAsc() {
         Set<User> users = new TreeSet<>();
@@ -22,6 +32,9 @@ public class UserTest {
         assertThat(it.next(), is(new User("Alex", 32)));
     }
 
+    /**
+     * <p>whenComparePetrVSIvan.</p>
+     */
     @Test
     public void whenComparePetrVSIvan() {
         int rsl = new User("Olga", 32)

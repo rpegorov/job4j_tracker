@@ -10,8 +10,18 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.lessThan;
 
+/**
+ * <p>JobTestSort class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class JobTestSort {
 
+    /**
+     * <p>sortByNameAndPriorityAsc.</p>
+     */
     @Test
     public void sortByNameAndPriorityAsc() {
         Comparator<Job> test = new JobSortByNameAsc().thenComparing(new JobSortByPriorityAsc());
@@ -22,6 +32,9 @@ public class JobTestSort {
         assertThat(rsl, lessThan(0));
     }
 
+    /**
+     * <p>whenCompatorByNameAndPrority.</p>
+     */
     @Test
     public void whenCompatorByNameAndPrority() {
         Comparator<Job> cmpNamePriority =
@@ -33,6 +46,9 @@ public class JobTestSort {
         assertThat(rsl, lessThan(0));
     }
 
+    /**
+     * <p>sortByNameAndPriorityDesc.</p>
+     */
     @Test
     public void sortByNameAndPriorityDesc() {
         Comparator<Job> test = new JobSortByNameAsc().thenComparing(new JobSortByPriorityDesc());
@@ -43,6 +59,9 @@ public class JobTestSort {
         assertThat(rsl, lessThan(1));
     }
 
+    /**
+     * <p>sortByNameAsc.</p>
+     */
     @Test
     public void sortByNameAsc() {
         List<Job> jobs = Arrays.asList(
@@ -54,6 +73,9 @@ public class JobTestSort {
         assertThat(jobs.get(0).getName(), is("AAA"));
     }
 
+    /**
+     * <p>sortByNameDesc.</p>
+     */
     @Test
     public void sortByNameDesc() {
         List<Job> jobs = Arrays.asList(
@@ -65,6 +87,9 @@ public class JobTestSort {
         assertThat(jobs.get(0).getName(), is("ZZZ"));
     }
 
+    /**
+     * <p>sortByPriorityAsc.</p>
+     */
     @Test
     public void sortByPriorityAsc() {
         Comparator<Job> test = new JobSortByPriorityAsc();
@@ -75,6 +100,9 @@ public class JobTestSort {
         assertThat(rsl, lessThan(4));
     }
 
+    /**
+     * <p>sortByPriorityDsc.</p>
+     */
     @Test
     public void sortByPriorityDsc() {
         Comparator<Job> test = new JobSortByPriorityDesc();

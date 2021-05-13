@@ -7,8 +7,18 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+/**
+ * <p>AnalyzeTest class.</p>
+ *
+ * @author rpegorov
+ * @version $Id: $Id
+ * @since 1.0 LATEST
+ */
 public class AnalyzeTest {
 
+    /**
+     * <p>whenSinglePupil.</p>
+     */
     @Test
     public void whenSinglePupil() {
         double average = Analyze.averageScore(
@@ -19,6 +29,9 @@ public class AnalyzeTest {
         assertThat(average, is(100D));
     }
 
+    /**
+     * <p>whenPupilAverage.</p>
+     */
     @Test
     public void whenPupilAverage() {
         double average = Analyze.averageScore(
@@ -30,6 +43,9 @@ public class AnalyzeTest {
         assertThat(average, is(80D));
     }
 
+    /**
+     * <p>whenListOfPupilAverage.</p>
+     */
     @Test
     public void whenListOfPupilAverage() {
         List<Tuple> average = Analyze.averageScoreBySubject(
@@ -46,6 +62,9 @@ public class AnalyzeTest {
         )));
     }
 
+    /**
+     * <p>whenListOfSubjectAverage.</p>
+     */
     @Test
     public void whenListOfSubjectAverage() {
         List<Tuple> average = Analyze.averageScoreByPupil(
@@ -62,6 +81,9 @@ public class AnalyzeTest {
         )));
     }
 
+    /**
+     * <p>whenBestPupil.</p>
+     */
     @Test
     public void whenBestPupil() {
         Tuple best = Analyze.bestStudent(
@@ -75,6 +97,9 @@ public class AnalyzeTest {
         assertThat(best, is(new Tuple("Ivanov", 200D)));
     }
 
+    /**
+     * <p>whenBestSubject.</p>
+     */
     @Test
     public void whenBestSubject() {
         Tuple best = Analyze.bestSubject(
